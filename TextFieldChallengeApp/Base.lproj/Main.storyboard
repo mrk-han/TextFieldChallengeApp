@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,6 +37,10 @@
                                     </textField>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IXX-RJ-qS7">
                                         <rect key="frame" x="286" y="0.0" width="51" height="31"/>
+                                        <color key="onTintColor" systemColor="systemTealColor"/>
+                                        <connections>
+                                            <action selector="makeEditable" destination="BYZ-38-t0r" eventType="valueChanged" id="kID-7Z-9vz"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -62,10 +67,21 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FFi-xK-XyV" secondAttribute="trailing" constant="20" id="w35-YL-MNw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="editableSwitch" destination="IXX-RJ-qS7" id="Ehf-mF-a3q"/>
+                        <outlet property="textfield1" destination="rzc-eR-vEf" id="NPh-18-SZf"/>
+                        <outlet property="textfield2" destination="yt6-w8-AT5" id="JDx-m5-i5g"/>
+                        <outlet property="textfield3" destination="3uk-7M-T8n" id="B5x-ba-bCl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
