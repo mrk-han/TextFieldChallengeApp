@@ -17,13 +17,15 @@ class ViewController: UIViewController {
     @IBOutlet var editableSwitch: UISwitch!
 
 
-    
-//    let zipcodeDelegate = ZipcodeDelegate()
-//    let moneyDelegate = MoneyDelegate()
+    let zipcodeDelegate = ZipcodeDelegate()
+    let moneyDelegate = MoneyDelegate()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.textfield1.delegate = zipcodeDelegate
+        self.textfield2.delegate = moneyDelegate
         self.editableSwitch.isOn = false
         self.textfield3.isEnabled = false
         // Do any additional setup after loading the view.
